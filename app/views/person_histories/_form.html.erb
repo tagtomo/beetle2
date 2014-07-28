@@ -1,0 +1,140 @@
+<%= form_for @person_history, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :number, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :number, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :history_no, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :history_no, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :person_type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :person_type, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :legal_cd, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :legal_cd, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :legal_position_cd, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :legal_position_cd, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :name_k, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name_k, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :branch_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :branch_name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :branch_name_k, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :branch_name_k, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :zipno, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :zipno, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :address1_cd, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address1_cd, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :address2_cd, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address2_cd, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :address3_cd, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address3_cd, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :address4_cd, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address4_cd, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :address5_cd, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address5_cd, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :address, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :address_kata, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address_kata, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :n_zei_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :n_zei_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :serch_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :serch_name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :serch_name_k, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :serch_name_k, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :update_date, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :update_date, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :update_reason, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :update_reason, :class => 'text_field' %>
+    </div>
+  </div>
+
+  
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            person_histories_path, :class => 'btn btn-default' %>
+ 
+<% end %>

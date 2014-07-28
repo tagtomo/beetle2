@@ -1,0 +1,14 @@
+/opt/rbenv/versions/2.1.1/bin/ruby extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling websocket_mask.c
+websocket_mask.c: In function ‘method_websocket_mask’:
+websocket_mask.c:20: 警告: ISO C90 forbids mixed declarations and code
+linking shared-object websocket_mask.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20140727-21080-d79t5c
+installing default websocket_mask libraries

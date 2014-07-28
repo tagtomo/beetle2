@@ -1,0 +1,78 @@
+<%- model_class = PersonHistory -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:number) %></th>
+      <th><%= model_class.human_attribute_name(:history_no) %></th>
+      <th><%= model_class.human_attribute_name(:person_type) %></th>
+      <th><%= model_class.human_attribute_name(:legal_cd) %></th>
+      <th><%= model_class.human_attribute_name(:legal_position_cd) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:name_k) %></th>
+      <th><%= model_class.human_attribute_name(:branch_name) %></th>
+      <th><%= model_class.human_attribute_name(:branch_name_k) %></th>
+      <th><%= model_class.human_attribute_name(:zipno) %></th>
+      <th><%= model_class.human_attribute_name(:address1_cd) %></th>
+      <th><%= model_class.human_attribute_name(:address2_cd) %></th>
+      <th><%= model_class.human_attribute_name(:address3_cd) %></th>
+      <th><%= model_class.human_attribute_name(:address4_cd) %></th>
+      <th><%= model_class.human_attribute_name(:address5_cd) %></th>
+      <th><%= model_class.human_attribute_name(:address) %></th>
+      <th><%= model_class.human_attribute_name(:address_kata) %></th>
+      <th><%= model_class.human_attribute_name(:n_zei_id) %></th>
+      <th><%= model_class.human_attribute_name(:serch_name) %></th>
+      <th><%= model_class.human_attribute_name(:serch_name_k) %></th>
+      <th><%= model_class.human_attribute_name(:update_date) %></th>
+      <th><%= model_class.human_attribute_name(:update_reason) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @person_histories.each do |person_history| %>
+      <tr>
+        <td><%= link_to person_history.id, person_history_path(person_history) %></td>
+        <td><%= person_history.number %></td>
+        <td><%= person_history.history_no %></td>
+        <td><%= person_history.person_type %></td>
+        <td><%= person_history.legal_cd %></td>
+        <td><%= person_history.legal_position_cd %></td>
+        <td><%= person_history.name %></td>
+        <td><%= person_history.name_k %></td>
+        <td><%= person_history.branch_name %></td>
+        <td><%= person_history.branch_name_k %></td>
+        <td><%= person_history.zipno %></td>
+        <td><%= person_history.address1_cd %></td>
+        <td><%= person_history.address2_cd %></td>
+        <td><%= person_history.address3_cd %></td>
+        <td><%= person_history.address4_cd %></td>
+        <td><%= person_history.address5_cd %></td>
+        <td><%= person_history.address %></td>
+        <td><%= person_history.address_kata %></td>
+        <td><%= person_history.n_zei_id %></td>
+        <td><%= person_history.serch_name %></td>
+        <td><%= person_history.serch_name_k %></td>
+        <td><%= person_history.update_date %></td>
+        <td><%= person_history.update_reason %></td>
+        <td><%=l person_history.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_person_history_path(person_history), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      person_history_path(person_history),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_person_history_path,
+            :class => 'btn btn-primary' %>

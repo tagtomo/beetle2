@@ -1,0 +1,61 @@
+<%- model_class = PersonHistory -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:number) %>:</strong></dt>
+  <dd><%= @person_history.number %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:history_no) %>:</strong></dt>
+  <dd><%= @person_history.history_no %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:person_type) %>:</strong></dt>
+  <dd><%= @person_history.person_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:legal_cd) %>:</strong></dt>
+  <dd><%= @person_history.legal_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:legal_position_cd) %>:</strong></dt>
+  <dd><%= @person_history.legal_position_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @person_history.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name_k) %>:</strong></dt>
+  <dd><%= @person_history.name_k %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:branch_name) %>:</strong></dt>
+  <dd><%= @person_history.branch_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:branch_name_k) %>:</strong></dt>
+  <dd><%= @person_history.branch_name_k %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:zipno) %>:</strong></dt>
+  <dd><%= @person_history.zipno %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address1_cd) %>:</strong></dt>
+  <dd><%= @person_history.address1_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address2_cd) %>:</strong></dt>
+  <dd><%= @person_history.address2_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address3_cd) %>:</strong></dt>
+  <dd><%= @person_history.address3_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address4_cd) %>:</strong></dt>
+  <dd><%= @person_history.address4_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address5_cd) %>:</strong></dt>
+  <dd><%= @person_history.address5_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dd><%= @person_history.address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address_kata) %>:</strong></dt>
+  <dd><%= @person_history.address_kata %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:n_zei_id) %>:</strong></dt>
+  <dd><%= @person_history.n_zei_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:serch_name) %>:</strong></dt>
+  <dd><%= @person_history.serch_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:serch_name_k) %>:</strong></dt>
+  <dd><%= @person_history.serch_name_k %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:update_date) %>:</strong></dt>
+  <dd><%= @person_history.update_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:update_reason) %>:</strong></dt>
+  <dd><%= @person_history.update_reason %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              person_histories_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_person_history_path(@person_history), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              person_history_path(@person_history),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
