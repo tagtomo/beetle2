@@ -15,19 +15,9 @@
       <th><%= model_class.human_attribute_name(:branch_name) %></th>
       <th><%= model_class.human_attribute_name(:branch_name_k) %></th>
       <th><%= model_class.human_attribute_name(:zipno) %></th>
-      <th><%= model_class.human_attribute_name(:address1_cd) %></th>
-      <th><%= model_class.human_attribute_name(:address2_cd) %></th>
-      <th><%= model_class.human_attribute_name(:address3_cd) %></th>
-      <th><%= model_class.human_attribute_name(:address4_cd) %></th>
-      <th><%= model_class.human_attribute_name(:address5_cd) %></th>
       <th><%= model_class.human_attribute_name(:address) %></th>
       <th><%= model_class.human_attribute_name(:address_kata) %></th>
       <th><%= model_class.human_attribute_name(:n_zei_id) %></th>
-      <th><%= model_class.human_attribute_name(:serch_name) %></th>
-      <th><%= model_class.human_attribute_name(:serch_name_k) %></th>
-      <th><%= model_class.human_attribute_name(:update_date) %></th>
-      <th><%= model_class.human_attribute_name(:update_reason) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -44,19 +34,9 @@
         <td><%= person.branch_name %></td>
         <td><%= person.branch_name_k %></td>
         <td><%= person.zipno %></td>
-        <td><%= person.address1_cd %></td>
-        <td><%= person.address2_cd %></td>
-        <td><%= person.address3_cd %></td>
-        <td><%= person.address4_cd %></td>
-        <td><%= person.address5_cd %></td>
         <td><%= person.address %></td>
         <td><%= person.address_kata %></td>
         <td><%= person.n_zei_id %></td>
-        <td><%= person.serch_name %></td>
-        <td><%= person.serch_name_k %></td>
-        <td><%= person.update_date %></td>
-        <td><%= person.update_reason %></td>
-        <td><%=l person.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_person_path(person), :class => 'btn btn-default btn-xs' %>
