@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      addressee: 送付先
+    attributes:
+      addressee:
+        number: 識別番号
+        data_type: 種別
+        name: 名称
+        zipno: 郵便番号
+        address1_cd: 都道府県CD
+        address2_cd: 市町村CD
+        address3_cd: 大字CD
+        address4_cd: 小字CD
+        address5_cd: 番地CD
+        address: 住所
+        address_kata: 所在地方書
+        start_date: 有効期間S
+        end_date: 有効期間E

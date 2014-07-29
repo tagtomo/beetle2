@@ -61,3 +61,15 @@
 <div>
   <%= render :partial => 'person_histories/index' %>
 </div>
+<div>
+  <%= render :partial => 'memos/index', locals: {memos: @person.memos} %>
+</div>
+<div>
+  <%= render :partial => 'addressees/index', locals: {addressees: @person.addressees}  %>
+</div>
+<div>
+  <%= render :partial => 'contacts/index', locals: {contacts: @person.contacts}  %>
+</div>
+<div>
+  <%= render :partial => 'bank_accounts/index', locals: {bank_accounts: @person.bank_accounts}  %>
+</div>

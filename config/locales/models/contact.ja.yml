@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    models:
+      contact: 連絡先
+    attributes:
+      contact:
+        number: 識別番号
+        data_type: 種別
+        department: 所属
+        name: 氏名
+        phone_no: 電話番号
+        fax_no: Fax番号
+        e_mail: メールアドレス
+        note: 備考

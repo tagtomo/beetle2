@@ -1,0 +1,1 @@
+json.extract! @addressee, :id, :number, :data_type, :name, :zipno, :address1_cd, :address2_cd, :address3_cd, :address4_cd, :address5_cd, :address, :address_kata, :start_date, :end_date, :created_at, :updated_at

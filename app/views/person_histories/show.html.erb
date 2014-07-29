@@ -50,9 +50,10 @@
   <dd><%= @person_history.update_reason %></dd>
 </dl>
 
-<%= link_to t('.back', :default => t("helpers.links.back")),
+<%= link_to 'Back', :back, :class => 'btn btn-default'  %>
+<%#= link_to t('.back', :default => t("helpers.links.back")),
               person_histories_path, :class => 'btn btn-default'  %>
-<%= link_to t('.edit', :default => t("helpers.links.edit")),
+<%#= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_person_history_path(@person_history), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               person_history_path(@person_history),

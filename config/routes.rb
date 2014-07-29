@@ -1,8 +1,23 @@
 Rails.application.routes.draw do
+  resources :bank_accounts
+
+  resources :contacts
+
+  resources :addressees
+
+  resources :memos
+
   root to: 'home#index'
   resources :person_histories
 
-  resources :people
+  #resources :people, shallow: true do
+  resources :people do
+    resources :person_histories
+    resources :memos
+    resources :addressees
+    resources :contacts
+    resources :bank_accounts
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

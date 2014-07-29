@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      bank_account: 銀行口座
+    attributes:
+      bank_account:
+        number: 識別番号
+        data_type: 種別
+        bank_cd: 金融機関コード
+        store_cd: 店舗コード
+        account_type: 口座種別
+        account_number: 口座番号
+        account_holder: 口座名義人
+        account_holder_k: 口座名義人カナ
+        transfer_method: 振替方法
+        transfer_request_date: 口座振替依頼日
+        stop_flg: 一時停止フラグ
+        start_date: 有効期間S
+        end_date: 有効期間E

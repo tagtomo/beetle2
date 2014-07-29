@@ -1,5 +1,9 @@
 class Person < ActiveRecord::Base
   has_many :person_histories, foreign_key: "number", primary_key: "number"
+  has_many :memos, foreign_key: "number", primary_key: "number"
+  has_many :contacts, foreign_key: "number", primary_key: "number"
+  has_many :addressees, foreign_key: "number", primary_key: "number"
+  has_many :bank_accounts, foreign_key: "number", primary_key: "number"
 
   after_save :create_history #更新時（create,update時に履歴を作成する）
 
