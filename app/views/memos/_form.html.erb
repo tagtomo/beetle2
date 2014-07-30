@@ -1,4 +1,4 @@
-<%= form_for @memo, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for [@person,@memo], :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.label :number, :class => 'control-label' %>
     <div class="controls">
@@ -20,8 +20,8 @@
 
 
   <%= f.submit nil, :class => 'btn btn-primary' %>
-  <%= link_to 'Cancel', :back, :class => 'btn btn-default'  %>
-  <%#= link_to t('.cancel', :default => t("helpers.links.cancel")),
-            memos_path, :class => 'btn btn-default' %>
+  <%#= link_to 'Cancel', :back, :class => 'btn btn-default'  %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            person_path(@person), :class => 'btn btn-default' %>
 
 <% end %>
