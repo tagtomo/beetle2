@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    models:
+      bg_kazei: たばこ課税台帳
+    attributes:
+      bg_kazei:
+        number: 識別番号
+        kazei_number: 課税整理番号
+        sotonendo: 相当年度
+        soto_y: 相当月
+        kazeinendo: 課税年度
+        kazei_y: 課税月
+        declaration_type: 申告区分
+        declaration_date: 申告日

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :bg_kazeis
+
+  resources :bg_kihon_histories
+
+  resources :bg_kihons
+
   resources :bank_accounts
 
   resources :contacts

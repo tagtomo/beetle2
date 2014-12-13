@@ -1,0 +1,54 @@
+<%- model_class = BgKihonHistory -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:number) %></th>
+      <th><%= model_class.human_attribute_name(:history_no) %></th>
+      <th><%= model_class.human_attribute_name(:kazei_type) %></th>
+      <th><%= model_class.human_attribute_name(:toriatukaitabako_type) %></th>
+      <th><%= model_class.human_attribute_name(:tokureitabako_type) %></th>
+      <th><%= model_class.human_attribute_name(:send_type) %></th>
+      <th><%= model_class.human_attribute_name(:stop_sdate) %></th>
+      <th><%= model_class.human_attribute_name(:stop_edate) %></th>
+      <th><%= model_class.human_attribute_name(:chenge_date) %></th>
+      <th><%= model_class.human_attribute_name(:change_jiyu) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bg_kihon_histories.each do |bg_kihon_history| %>
+      <tr>
+        <td><%= link_to bg_kihon_history.id, bg_kihon_history_path(bg_kihon_history) %></td>
+        <td><%= bg_kihon_history.number %></td>
+        <td><%= bg_kihon_history.history_no %></td>
+        <td><%= bg_kihon_history.kazei_type %></td>
+        <td><%= bg_kihon_history.toriatukaitabako_type %></td>
+        <td><%= bg_kihon_history.tokureitabako_type %></td>
+        <td><%= bg_kihon_history.send_type %></td>
+        <td><%= bg_kihon_history.stop_sdate %></td>
+        <td><%= bg_kihon_history.stop_edate %></td>
+        <td><%= bg_kihon_history.chenge_date %></td>
+        <td><%= bg_kihon_history.change_jiyu %></td>
+        <td><%=l bg_kihon_history.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_bg_kihon_history_path(bg_kihon_history), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      bg_kihon_history_path(bg_kihon_history),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_bg_kihon_history_path,
+            :class => 'btn btn-primary' %>

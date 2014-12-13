@@ -1,0 +1,49 @@
+<%- model_class = Person -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:number) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.number %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:person_type) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.person_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:legal_cd) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.legal_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:legal_position_cd) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.legal_position_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name_k) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.name_k %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:branch_name) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.branch_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:branch_name_k) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.branch_name_k %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:zipno) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.zipno %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address1_cd) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.address1_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address2_cd) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.address2_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address3_cd) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.address3_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address4_cd) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.address4_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address5_cd) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.address5_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address_kata) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.address_kata %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:n_zei_id) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.n_zei_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:serch_name) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.serch_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:serch_name_k) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.serch_name_k %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:update_date) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.update_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:update_reason) %>:</strong></dt>
+  <dd><%= @bg_kihon.person.update_reason %></dd>
+</dl>

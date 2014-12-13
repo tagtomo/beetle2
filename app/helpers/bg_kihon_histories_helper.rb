@@ -1,0 +1,2 @@
+module BgKihonHistoriesHelper
+end

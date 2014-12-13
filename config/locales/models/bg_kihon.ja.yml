@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      bg_kihon: たばこ基本台帳
+    attributes:
+      bg_kihon:
+        number: 識別番号
+        kazei_type: 手持品課税対象区分
+        toriatukaitabako_type: 取扱たばこ区分
+        tokureitabako_type: 特例業者区分
+        send_type: 送付区分
+        stop_sdate: 休止期間S
+        stop_edate: 休止期間E
+        chenge_date: 異動日
+        change_jiyu: 異動事由

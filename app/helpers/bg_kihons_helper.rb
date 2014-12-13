@@ -1,0 +1,2 @@
+module BgKihonsHelper
+end

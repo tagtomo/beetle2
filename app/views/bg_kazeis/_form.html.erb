@@ -1,0 +1,56 @@
+<%= form_for @bg_kazei, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :number, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :number, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :kazei_number, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :kazei_number, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :sotonendo, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :sotonendo, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :soto_y, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :soto_y, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :kazeinendo, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :kazeinendo, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :kazei_y, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :kazei_y, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :declaration_type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :declaration_type, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :declaration_date, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :declaration_date, :class => 'text_field' %>
+    </div>
+  </div>
+
+  
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            bg_kazeis_path, :class => 'btn btn-default' %>
+ 
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140728233953) do
+ActiveRecord::Schema.define(version: 20140801115119) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,48 @@ ActiveRecord::Schema.define(version: 20140728233953) do
     t.string   "stop_flg"
     t.date     "start_date"
     t.date     "end_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bg_kazeis", force: true do |t|
+    t.string   "number"
+    t.string   "kazei_number"
+    t.string   "sotonendo"
+    t.string   "soto_y"
+    t.string   "kazeinendo"
+    t.string   "kazei_y"
+    t.string   "declaration_type"
+    t.string   "declaration_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bg_kihon_histories", force: true do |t|
+    t.string   "number"
+    t.integer  "history_no"
+    t.string   "kazei_type"
+    t.string   "toriatukaitabako_type"
+    t.string   "tokureitabako_type"
+    t.string   "send_type"
+    t.date     "stop_sdate"
+    t.date     "stop_edate"
+    t.date     "chenge_date"
+    t.string   "change_jiyu"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bg_kihons", force: true do |t|
+    t.string   "number"
+    t.string   "kazei_type"
+    t.string   "toriatukaitabako_type"
+    t.string   "tokureitabako_type"
+    t.string   "send_type"
+    t.date     "stop_sdate"
+    t.date     "stop_edate"
+    t.date     "chenge_date"
+    t.string   "change_jiyu"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

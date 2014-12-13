@@ -1,0 +1,1 @@
+json.extract! @bg_kihon_history, :id, :number, :history_no, :kazei_type, :toriatukaitabako_type, :tokureitabako_type, :send_type, :stop_sdate, :stop_edate, :change_date, :change_jiyu, :created_at, :updated_at
